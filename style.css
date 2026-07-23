@@ -7,16 +7,17 @@ body{
     
 max-width: 1440px;
 margin: auto;
-
-
 }
 nav{
     display: flex;
     justify-content: space-between;
-    padding:10px ;
+    height: 64px;
 }
 nav h1{
     margin-left:24px ;
+}
+nav ul li a:hover{
+    color: rgb(244, 119, 119);
 }
 ul{
     display: flex;
@@ -29,8 +30,9 @@ ul li{
     list-style: none;
   
 }
-a{
+ul li a{
     text-decoration: none;
+    color :black;
 
 }
 #hero{
@@ -40,7 +42,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    text-decoration-line: none;
 }
 #hero img {
     height: auto;
@@ -170,11 +172,12 @@ video{
     line-height: 1.5;
 }
 .thesis-page-right{
-    margin: 10px;
+    max-width: 500px;
+   
 }
 .thesis-page-right-content{
     display: flex;
-    max-width: 500px;
+    
     margin: 10px;
     background-color: white;
 }
@@ -184,12 +187,69 @@ video{
 .thesis-page-right-content img{
     height: auto;
     width: 50%;
-    object-fit: fill;
+    object-fit: cover;
 }
+
 .thesis-page-right-text-container{
 gap: 20px;
 margin:10px
 }
+
+@media(max-width:900px){
+#hero{
+    padding:32px 24px 32px 24px;
+    height: 40vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration-line: none;
+}
+}
+
+@media (max-width: 768px) {
+   
+    .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  /* สร้างเส้น 3 เส้นของปุ่ม Hamburger */
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+   #hero{
+    display: flex;
+    flex-direction: column;
+   }
+   #hero img {
+    height: auto;
+    width: 50%;
+}
+.information{
+  display: flex;
+    flex-direction: column;
+}
+
+.information-left >img{
+    height: auto;
+    width: 50%;     
+}
+.information-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+}
+}
+
 /* @media (min-width: 768px) {
   .header {grid-area: 1 / span 6;}
   .menu {grid-area: 2 / span 1;}
